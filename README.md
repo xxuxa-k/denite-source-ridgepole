@@ -6,7 +6,7 @@ Custom [Denite](https://github.com/Shougo/denite.nvim) source for table definiti
 
 This is custom source of Denite. You need a properly configured Denite.
 
-## Install
+## Installation
 
 For vim-plug user,
 
@@ -35,7 +35,7 @@ Optionally, define your key map to start `:Denite ridgepole`.
 nnoremap <Leader>r :Denite ridgepole<CR>
 ```
 
-## How to use
+## Usage
 
 Just call `:Denite ridgepole`. Keep in mind, however, that this plugin is intended to be used from the rails project root.
 
