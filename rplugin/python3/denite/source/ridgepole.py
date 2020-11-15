@@ -3,21 +3,20 @@ import os
 import re
 
 class Source(Base):
-
     def __init__(self, vim):
         super().__init__(vim)
         self.name = 'ridgepole'
         self.kind = 'file'
 
     def on_init(self, context):
-        context['__bufnr'] = str(self.vim.call('bufnr', '%'))
+        pass
 
     def gather_candidates(self, context):
         schemafile_path = self.vim.eval("g:denite_source_ridgepole#schemafile_path")
         if os.path.exists(schemafile_path) == False:
             return []
-        candidates = []
 
+        candidates = []
         with open(schemafile_path, 'r') as schemafile:
             for line_num, line in enumerate(schemafile, 1):
                 l = line.strip()
